@@ -25,7 +25,7 @@ public class Geography {
         }
     }
 
-    public void printSquareTriangle(int a) {
+    public void printSquareTriangleBottomLeft(int a) {
         for (int i = 0; i < a; i++) {
             for (int j = 0; j <= i; j++) {
                 System.out.print("* ");
@@ -34,7 +34,7 @@ public class Geography {
         }
     }
 
-    public void printIsoscelesTriangle(int a) {
+    public void printSquareTriangleTopLeft(int a) {
         for (int i = a; i > 0; i--) {
             for (int j = 1; j <= i; j++) {
                 System.out.print("* ");
@@ -43,6 +43,14 @@ public class Geography {
         }
     }
 
+    public void printIsoscelesTriangle(int a) {
+        for (int i = 0; i < a; i++) {
+            for (int j = 0; j <= i; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
     public static void main(String[] args) {
         Geography geo = new Geography();
         while (true) {
@@ -56,9 +64,32 @@ public class Geography {
                     geo.printRectangle(a, b);
                     break;
                 case 2:
+                    System.out.println("----Triangle----");
+                    System.out.println("1. Top left");
+                    System.out.println("2. Top right");
+                    System.out.println("3. Bottom left");
+                    System.out.println("4. Bottom right");
+                    System.out.print("Enter your choice: ");
+                    int ch = sc.nextInt();
                     System.out.print("Hãy nhập độ rộng của tam giác: ");
                     int c = sc.nextInt();
-                    geo.printSquareTriangle(c);
+                    switch (ch) {
+                        case 1:
+                            System.out.println("Top left");
+                            geo.printSquareTriangleTopLeft(c);
+                            break;
+                        case 2:
+                            System.out.println("Top right");
+                            break;
+                        case 3:
+                            System.out.println("Bottom left");
+                            geo.printSquareTriangleBottomLeft(c);
+                            break;
+                        case 4:
+                            System.out.println("Bottom right");
+                            break;
+                        default: System.out.println("Don't have this option");
+                    }
                     break;
                 case 3:
                     System.out.print("Hãy nhập độ rộng của tam giác: ");
