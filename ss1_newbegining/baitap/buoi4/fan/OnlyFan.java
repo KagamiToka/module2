@@ -1,4 +1,4 @@
-package buoi4.Fan;
+package baitap.buoi4.fan;
 
 public class OnlyFan {
     public static final int LOW = 1;

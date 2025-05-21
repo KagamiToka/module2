@@ -1,4 +1,4 @@
-package buoi4.StopWatch;
+package baitap.buoi4.stopWatch;
 
 import java.util.Date;
 import java.util.Scanner;

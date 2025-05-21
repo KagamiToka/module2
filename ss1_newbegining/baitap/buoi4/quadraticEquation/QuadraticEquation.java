@@ -1,4 +1,4 @@
-package buoi4.QuadraticEquation;
+package baitap.buoi4.quadraticEquation;
 
 public class QuadraticEquation {
     private double a, b, c;

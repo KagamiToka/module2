@@ -1,4 +1,4 @@
-package buoi4.Fan;
+package baitap.buoi4.fan;
 
 public class Main {
     public static void main(String[] args) {

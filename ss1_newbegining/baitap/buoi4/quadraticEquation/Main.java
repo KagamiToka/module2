@@ -1,4 +1,4 @@
-package buoi4.QuadraticEquation;
+package baitap.buoi4.quadraticEquation;
 
 import java.util.Scanner;
 
