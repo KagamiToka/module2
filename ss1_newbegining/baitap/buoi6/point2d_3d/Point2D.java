@@ -1,4 +1,4 @@
-package buoi6.point2d_3d;
+package baitap.buoi6.point2d_3d;
 
 public class Point2D {
     private float x, y;

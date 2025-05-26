@@ -1,4 +1,4 @@
-package buoi6.point_va_moveablepoint;
+package baitap.buoi6.point_va_moveablepoint;
 
 public class Point {
     private float x, y;
