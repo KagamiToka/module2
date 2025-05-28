@@ -42,7 +42,7 @@ public class Main {
         String name = sc.nextLine();
         System.out.print("Nhập giá của sản phẩm: ");
         double price = Double.parseDouble(sc.nextLine());
-        productList.addProduct(new Product(id, name, price));
+        productList.addProduct(productList.getProducts(), new Product(id, name, price));
         System.out.println("---------------------------");
     }
 

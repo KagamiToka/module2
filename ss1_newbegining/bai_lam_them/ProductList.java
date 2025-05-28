@@ -23,22 +23,26 @@ public class ProductList {
         return null;
     }
 
-    private void resize() {
-        int newCapacity = products.length * 2;
-        Product[] newProducts = new Product[newCapacity];
-        for (int i = 0; i < products.length; i++) {
-            newProducts[i] = products[i];
-        }
-        products = newProducts;
-    }
+//    private void resize() {
+//        int newCapacity = products.length + 1;
+//        Product[] newProducts = new Product[newCapacity];
+//        for (int i = 0; i < products.length; i++) {
+//            newProducts[i] = products[i];
+//        }
+//        products = newProducts;
+//    }
 
-    public void addProduct(Product product) {
-        for (int i = 0; i <= products.length; i++) {
-            if (products[i] == null) {
-                resize();
-            }
-            products[i] = product;
+    public Product[] addProduct(Product[] productList, Product product) {
+        Product[] newProducts = new Product[productList.length + 1];
+        for (int i = 0; i < products.length; i++) {
+            newProducts[i] = productList[i];
+//            if (products[i] == null) {
+//                resize();
+//            }
+//            products[i] = product;
         }
+        newProducts[productList.length] = product;
+        return newProducts;
     }
 
     public void deleteProduct(int id) {
