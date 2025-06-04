@@ -3,6 +3,8 @@ package bai_tap_lam_them.model.service;
 import bai_tap_lam_them.model.entity.Car;
 import bai_tap_lam_them.model.repository.CarRepository;
 
+import java.util.List;
+
 public class CarService implements ICarService{
     CarRepository carRepository = new CarRepository();
 
@@ -12,7 +14,7 @@ public class CarService implements ICarService{
     }
 
     @Override
-    public Car[] findAllCars() {
+    public List<Car> findAllCars() {
         return carRepository.findAllCars();
     }
 
