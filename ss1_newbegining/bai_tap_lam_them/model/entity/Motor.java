@@ -26,7 +26,7 @@ public class Motor extends Transport{
     @Override
     public String toString() {
         return "Motor{" + super.toString() +
-                "congSuat=" + congSuat +
+                " congSuat=" + congSuat +
                 '}';
     }
 }

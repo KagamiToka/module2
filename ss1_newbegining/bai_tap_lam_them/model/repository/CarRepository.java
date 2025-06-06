@@ -6,12 +6,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CarRepository {
-    private List<Car> cars = new ArrayList<>();
+    private static List<Car> cars = new ArrayList<>();
 
-    private void insertData() {
-        cars.add(1,new Car());
-        cars.add(1,new Car());
-        cars.add(1,new Car());
+    static  {
+        cars.add(new Car("43A-212.56","Toyota","2019","Nguyễn Văn A",5,"Du lịch"));
+        cars.add(new Car("43B-453.88","Huyndai","2020","Nguyễn Văn B",45,"Xe khách"));
+        cars.add(new Car("43B-453.89","Ford","2020","Nguyễn Văn C",12,"Xe khách"));
     }
 
 

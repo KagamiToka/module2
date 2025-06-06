@@ -26,7 +26,7 @@ public class Truck extends Transport{
     @Override
     public String toString() {
         return "Truck{" + super.toString() +
-                "trongTai=" + trongTai +
+                " trongTai=" + trongTai +
                 '}';
     }
 }

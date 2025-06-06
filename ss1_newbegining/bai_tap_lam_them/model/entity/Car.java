@@ -37,7 +37,7 @@ public class Car extends Transport{
     @Override
     public String toString() {
         return "Car{" + super.toString() +
-                "soChoNgoi=" + soChoNgoi +
+                " soChoNgoi=" + soChoNgoi +
                 ", kieuXe='" + kieuXe + '\'' +
                 '}';
     }

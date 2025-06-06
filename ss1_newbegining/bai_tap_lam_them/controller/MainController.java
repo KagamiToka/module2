@@ -5,6 +5,7 @@ import bai_tap_lam_them.model.entity.Motor;
 import bai_tap_lam_them.model.entity.Truck;
 import bai_tap_lam_them.view.MainView;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class MainController {
@@ -55,7 +56,7 @@ public class MainController {
                     System.out.println("Không có lựa chọn này hãy vui lòng chọn lại");
             }
         }
-        return flag1;
+        return true;
     }
 
     private static boolean listVehicles() {
@@ -79,7 +80,7 @@ public class MainController {
                     System.out.println("Không có lựa chọn này hãy vui lòng chọn lại");
             }
         }
-        return flag2;
+        return true;
     }
 
     private static void addTruck() {
@@ -128,16 +129,25 @@ public class MainController {
 
     public static void getListCars(){
         System.out.println("------LIST CAR-----");
-        cc.getAllCars();
+        List<Car> cars = cc.getAllCars();
+        for (Car car : cars){
+            System.out.println(car);
+        }
     }
 
     public static void getListMotors(){
         System.out.println("------LIST MOTOR-----");
-        mc.getMotors();
+        List<Motor> motors = mc.getMotors();
+        for (Motor motor : motors){
+            System.out.println(motor);
+        }
     }
 
     public static void getListTrucks(){
         System.out.println("------LIST TRUCK-----");
-        tc.getAllTruck();
+        List<Truck> trucks = tc.getAllTruck();
+        for (Truck truck : trucks){
+            System.out.println(truck);
+        }
     }
 }
