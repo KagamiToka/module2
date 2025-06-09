@@ -20,7 +20,7 @@ public class CarService implements ICarService{
 
     @Override
     public void deleteCar(String id) {
-
+        carRepository.deleteCar(id);
     }
 
     @Override
@@ -30,6 +30,6 @@ public class CarService implements ICarService{
 
     @Override
     public void updateCar(String id, Car car) {
-        
+        carRepository.updateCar(id,car);
     }
 }

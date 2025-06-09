@@ -36,4 +36,34 @@ public class MainView {
         int choice = Integer.parseInt(sc.nextLine());
         return choice;
     }
+
+    public int displayEditDelateView() {
+        System.out.println("----SỬA XÓA PHƯƠNG TIỆN GIAO THÔNG");
+        System.out.println("----------1.Sửa----------");
+        System.out.println("----------2.Xóa----------");
+        System.out.println("----------3.Quay lại-----");
+        System.out.println("Mời bạn nhập lựa chọn");
+        int choice = Integer.parseInt(sc.nextLine());
+        return choice;
+    }
+
+    public int displayDeleteView() {
+        System.out.println("----XÓA PHƯƠNG TIỆN GIAO THÔNG----");
+        System.out.println("---------1. Xe tải---------");
+        System.out.println("---------2. Ô tô-----------");
+        System.out.println("---------3. Xe máy---------");
+        System.out.println("---------4. Quay lại-------");
+        int choice = Integer.parseInt(sc.nextLine());
+        return choice;
+    }
+
+    public int displayEditView() {
+        System.out.println("----SỬA PHƯƠNG TIỆN GIAO THÔNG----");
+        System.out.println("---------1. Xe tải---------");
+        System.out.println("---------2. Ô tô-----------");
+        System.out.println("---------3. Xe máy---------");
+        System.out.println("---------4. Quay lại-------");
+        int choice = Integer.parseInt(sc.nextLine());
+        return choice;
+    }
 }

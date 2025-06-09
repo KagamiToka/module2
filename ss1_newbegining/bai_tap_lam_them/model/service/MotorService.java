@@ -16,12 +16,12 @@ public class MotorService implements IMotorService{
 
     @Override
     public void deleteMotor(String id) {
-
+        motorRepository.deleteMotor(id);
     }
 
     @Override
     public void updateMotor(String id, Motor motor) {
-
+        motorRepository.updateMotor(id, motor);
     }
 
     @Override

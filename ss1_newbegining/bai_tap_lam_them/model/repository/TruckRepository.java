@@ -21,4 +21,24 @@ public class TruckRepository {
     public List<Truck> findAllTrucks() {
         return trucks;
     }
+
+    public void deleteTruck(String id) {
+        for (Truck truck : trucks) {
+            if (truck.getBienKiemSoat().equals(id)) {
+                trucks.remove(truck);
+            }
+        }
+    }
+
+    public void updateTruck(String id, Truck truck) {
+        for (Truck truck1 : trucks) {
+            if (truck1.getBienKiemSoat().equals(id)) {
+                truck1.setBienKiemSoat(truck.getBienKiemSoat());
+                truck1.setTenHangSanXuat(truck.getTenHangSanXuat());
+                truck1.setNamSanXuat(truck.getNamSanXuat());
+                truck1.setChuSoHuu(truck.getChuSoHuu());
+                truck1.setTrongTai(truck.getTrongTai());
+            }
+        }
+    }
 }

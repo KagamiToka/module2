@@ -14,4 +14,8 @@ public class MotorController {
     public void addMotor(Motor motor) { motorService.addMotor(motor); }
 
     public List<Motor> getMotors() { return motorService.findAllMotors(); }
+
+    public void deleteMotor(String id) { motorService.deleteMotor(id);}
+
+    public void updateMotor(String id, Motor motor) { motorService.updateMotor(id, motor); }
 }

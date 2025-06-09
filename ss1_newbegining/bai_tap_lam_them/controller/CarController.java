@@ -14,4 +14,8 @@ public class CarController {
     }
 
     public List<Car> getAllCars(){ return carService.findAllCars(); }
+
+    public void deleteCar (String id){ carService.deleteCar(id);}
+
+    public void updateCar (String id, Car car){ carService.updateCar(id, car); }
 }

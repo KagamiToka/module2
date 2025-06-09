@@ -21,4 +21,24 @@ public class MotorRepository {
     public List<Motor> findALlMotors(){
         return motors;
     }
+
+    public void deleteMotor(String id){
+        for (Motor motor : motors){
+            if (motor.getBienKiemSoat().equals(id)){
+                motors.remove(motor);
+            }
+        }
+    }
+
+    public void updateMotor(String id, Motor motor){
+        for (Motor motor2 : motors){
+            if (motor2.getBienKiemSoat().equals(id)){
+                motor2.setBienKiemSoat(motor.getBienKiemSoat());
+                motor2.setTenHangSanXuat(motor.getTenHangSanXuat());
+                motor2.setNamSanXuat(motor.getNamSanXuat());
+                motor2.setChuSoHuu(motor.getChuSoHuu());
+                motor2.setCongSuat(motor.getCongSuat());
+            }
+        }
+    }
 }

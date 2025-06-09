@@ -26,6 +26,7 @@ public class MainController {
                     flag = listVehicles();
                     break;
                 case 3:
+                    flag = editDeleteVehicle();
                     break;
                 case 4:
                     System.exit(0);
@@ -78,6 +79,70 @@ public class MainController {
                     break;
                 default:
                     System.out.println("Không có lựa chọn này hãy vui lòng chọn lại");
+            }
+        }
+        return true;
+    }
+
+    private static boolean editDeleteVehicle() {
+        boolean flag3 = true;
+        while (flag3) {
+            int choice3 = view.displayEditDelateView();
+            switch (choice3) {
+                case 1:
+                    flag3 = editVehicle();
+                    break;
+                case 2:
+                    flag3 = deleteVehicle();
+                    break;
+                case 3:
+                    flag3 = false;
+                default:
+                    System.out.println("Không có lựa chọn này");
+            }
+        }
+        return true;
+    }
+
+    private static boolean editVehicle() {
+        boolean flag4 = true;
+        while (flag4) {
+            int choice4 = view.displayEditView();
+            switch (choice4) {
+                case 1:
+                    updateTrucks();
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    flag4 = false;
+                default:
+                    System.out.println("Không cóa lựa chọn này");
+            }
+        }
+        return true;
+    }
+
+    private static boolean deleteVehicle() {
+        boolean flag5 = true;
+        while (flag5) {
+            int choice5 = view.displayDeleteView();
+            switch (choice5) {
+                case 1:
+                    deleteTrucks();
+                    break;
+                case 2:
+                    deleteCars();
+                    break;
+                case 3:
+                    deleteMotors();
+                    break;
+                case 4:
+                    flag5 = false;
+                default:
+                    System.out.println("Không cóa lựa chọn này");
             }
         }
         return true;
@@ -149,5 +214,43 @@ public class MainController {
         for (Truck truck : trucks){
             System.out.println(truck);
         }
+    }
+
+    public static void deleteTrucks(){
+        System.out.println("------DELETE TRUCK-----");
+        System.out.println("Nhập biển kiểm soát xe muốn xóa: ");
+        String newBienKiemSoat = sc.nextLine();
+        tc.deleteTruck(newBienKiemSoat);
+    }
+
+    public static void deleteMotors(){
+        System.out.println("------DELETE MOTOR-----");
+        System.out.println("Nhập biển kiểm soát xe muốn xóa: ");
+        String bienKiemSoat = sc.nextLine();
+        mc.deleteMotor(bienKiemSoat);
+    }
+
+    public static void deleteCars(){
+        System.out.println("------DELETE CAR-----");
+        System.out.println("Nhập biển kiểm soát xe muốn xóa: ");
+        String bienKiemSoat = sc.nextLine();
+        cc.deleteCar(bienKiemSoat);
+    }
+
+    public static void updateTrucks(){
+        System.out.println("------UPDATE TRUCK-----");
+        System.out.print("Nhập biển kiểm soát xe muốn xóa: ");
+        String bienKiemSoat = sc.nextLine();
+        System.out.print("Nhập biển kiểm soát mới: ");
+        String newBienKiemSoat = sc.nextLine();
+        System.out.print("Nhập tên hãng sản xuất mới: ");
+        String newHangSanXuat = sc.nextLine();
+        System.out.print("Nhập năm sản xuất mới: ");
+        String newNamSanXuat = sc.nextLine();
+        System.out.print("Nhập chủ sở hữu mới: ");
+        String newChuSoHuu = sc.nextLine();
+        System.out.print("Nhập tải trọng mới: ");
+        Double newTrongTai = Double.parseDouble(sc.nextLine());
+        tc.updateTruck(bienKiemSoat, new Truck(newBienKiemSoat,newHangSanXuat,newNamSanXuat,newChuSoHuu,newTrongTai));
     }
 }

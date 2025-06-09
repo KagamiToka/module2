@@ -21,12 +21,12 @@ public class TruckService implements ITruckService {
 
     @Override
     public void deleteTruck(String id) {
-
+        truckRepository.deleteTruck(id);
     }
 
     @Override
     public void updateTruck(String id, Truck truck) {
-
+        truckRepository.updateTruck(id, truck);
     }
 
     @Override

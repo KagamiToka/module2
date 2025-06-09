@@ -16,4 +16,8 @@ public class TruckController {
     public List<Truck> getAllTruck() {
         return truckService.findAllTrucks();
     }
+
+    public void deleteTruck(String id) { truckService.deleteTruck(id); }
+
+    public void updateTruck(String id, Truck truck) {truckService.updateTruck(id, truck);}
 }

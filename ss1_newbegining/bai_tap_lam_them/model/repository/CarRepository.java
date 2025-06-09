@@ -23,18 +23,24 @@ public class CarRepository {
         return cars;
     }
 
-//    public Car findCarById(String id) {
-//        for (Car car : cars) {
-//            if (id == car.getBienKiemSoat()){
-//                return car;
-//        }
-//    }
-//
-//    public void deleteCar(String id) {
-//
-//    }
-//
-//    public void updateCar(String id, Car car) {
-//
-//    }
+    public void deleteCar(String id) {
+        for(Car car : cars){
+            if (car.getBienKiemSoat().equals(id)){
+                cars.remove(car);
+            }
+        }
+    }
+
+    public void updateCar(String id, Car car) {
+        for(Car car1 : cars){
+            if (car1.getBienKiemSoat().equals(id)){
+                car1.setBienKiemSoat(car.getBienKiemSoat());
+                car1.setTenHangSanXuat(car.getTenHangSanXuat());
+                car1.setNamSanXuat(car.getNamSanXuat());
+                car1.setChuSoHuu(car.getChuSoHuu());
+                car1.setSoChoNgoi(car.getSoChoNgoi());
+                car1.setKieuXe(car.getKieuXe());
+            }
+        }
+    }
 }
