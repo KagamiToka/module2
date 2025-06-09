@@ -113,8 +113,10 @@ public class MainController {
                     updateTrucks();
                     break;
                 case 2:
+                    updateCars();
                     break;
                 case 3:
+                    updateMotors();
                     break;
                 case 4:
                     flag4 = false;
@@ -252,5 +254,41 @@ public class MainController {
         System.out.print("Nhập tải trọng mới: ");
         Double newTrongTai = Double.parseDouble(sc.nextLine());
         tc.updateTruck(bienKiemSoat, new Truck(newBienKiemSoat,newHangSanXuat,newNamSanXuat,newChuSoHuu,newTrongTai));
+    }
+
+    public static void updateMotors(){
+        System.out.println("------UPDATE MOTOR-----");
+        System.out.print("Nhập biển kiểm soát xe muốn xóa: ");
+        String bienKiemSoat = sc.nextLine();
+        System.out.print("Nhập biển kiểm soát mới: ");
+        String newBienKiemSoat = sc.nextLine();
+        System.out.print("Nhập tên hãng sản xuất mới: ");
+        String newHangSanXuat = sc.nextLine();
+        System.out.print("Nhập năm sản xuất mới: ");
+        String newNamSanXuat = sc.nextLine();
+        System.out.print("Nhập chủ sở hữu mới: ");
+        String newChuSoHuu = sc.nextLine();
+        System.out.print("Nhập công suất mới: ");
+        Double newCongSuat = Double.parseDouble(sc.nextLine());
+        mc.updateMotor(bienKiemSoat, new Motor(newBienKiemSoat,newHangSanXuat,newNamSanXuat,newChuSoHuu,newCongSuat));
+    }
+
+    public static void updateCars(){
+        System.out.println("------UPDATE CAR-----");
+        System.out.print("Nhập biển kiểm soát xe muốn xóa: ");
+        String bienKiemSoat = sc.nextLine();
+        System.out.print("Nhập biển kiểm soát mới: ");
+        String newBienKiemSoat = sc.nextLine();
+        System.out.print("Nhập tên hãng sản xuất mới: ");
+        String newHangSanXuat = sc.nextLine();
+        System.out.print("Nhập năm sản xuất mới: ");
+        String newNamSanXuat = sc.nextLine();
+        System.out.print("Nhập chủ sở hữu mới: ");
+        String newChuSoHuu = sc.nextLine();
+        System.out.print("Nhập số chỗ ngồi: ");
+        Integer newSoChoNgoi = Integer.parseInt(sc.nextLine());
+        System.out.print("Nhập kiểu xe mới: ");
+        String newKieuXe = sc.nextLine();
+        cc.updateCar(bienKiemSoat, new Car(newBienKiemSoat,newHangSanXuat,newNamSanXuat,newChuSoHuu,newSoChoNgoi,newKieuXe));
     }
 }
