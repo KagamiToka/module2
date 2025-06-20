@@ -9,19 +9,33 @@ public class MotorService implements IMotorService{
     MotorRepository motorRepository = new MotorRepository();
 
     @Override
-    public void addMotor(Motor motor) { motorRepository.addMotor(motor); }
+    public void addMotor(Motor motor) {
+        if (motorRepository.addMotor(motor)) {
+            System.out.println("Motor added successfully");
+        } else {
+            System.out.println("Motor add failed");
+        }
+    }
 
     @Override
     public List<Motor> findAllMotors() {return motorRepository.findALlMotors();}
 
     @Override
     public void deleteMotor(String id) {
-        motorRepository.deleteMotor(id);
+        if (motorRepository.deleteMotor(id)) {
+            System.out.println("Motor deleted successfully");
+        } else  {
+            System.out.println("Motor delete failed");
+        }
     }
 
     @Override
     public void updateMotor(String id, Motor motor) {
-        motorRepository.updateMotor(id, motor);
+        if (motorRepository.updateMotor(id, motor)) {
+            System.out.println("Motor updated successfully");
+        } else  {
+            System.out.println("Motor updated failed");
+        }
     }
 
     @Override

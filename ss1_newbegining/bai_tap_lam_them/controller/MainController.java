@@ -220,21 +220,21 @@ public class MainController {
 
     public static void deleteTrucks(){
         System.out.println("------DELETE TRUCK-----");
-        System.out.println("Nhập biển kiểm soát xe muốn xóa: ");
+        System.out.print("Nhập biển kiểm soát xe muốn xóa: ");
         String newBienKiemSoat = sc.nextLine();
         tc.deleteTruck(newBienKiemSoat);
     }
 
     public static void deleteMotors(){
         System.out.println("------DELETE MOTOR-----");
-        System.out.println("Nhập biển kiểm soát xe muốn xóa: ");
+        System.out.print("Nhập biển kiểm soát xe muốn xóa: ");
         String bienKiemSoat = sc.nextLine();
         mc.deleteMotor(bienKiemSoat);
     }
 
     public static void deleteCars(){
         System.out.println("------DELETE CAR-----");
-        System.out.println("Nhập biển kiểm soát xe muốn xóa: ");
+        System.out.print("Nhập biển kiểm soát xe muốn xóa: ");
         String bienKiemSoat = sc.nextLine();
         cc.deleteCar(bienKiemSoat);
     }

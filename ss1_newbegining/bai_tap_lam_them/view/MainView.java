@@ -53,6 +53,7 @@ public class MainView {
         System.out.println("---------2. Ô tô-----------");
         System.out.println("---------3. Xe máy---------");
         System.out.println("---------4. Quay lại-------");
+        System.out.println("Mời bạn nhập lựa chọn");
         int choice = Integer.parseInt(sc.nextLine());
         return choice;
     }
@@ -63,6 +64,7 @@ public class MainView {
         System.out.println("---------2. Ô tô-----------");
         System.out.println("---------3. Xe máy---------");
         System.out.println("---------4. Quay lại-------");
+        System.out.println("Mời bạn nhập lựa chọn");
         int choice = Integer.parseInt(sc.nextLine());
         return choice;
     }
