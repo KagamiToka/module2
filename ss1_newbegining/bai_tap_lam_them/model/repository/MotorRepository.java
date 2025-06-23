@@ -17,6 +17,10 @@ public class MotorRepository {
 //        motors.add(new Motor("43-AK-765.23","Ford","2020","Nguyễn Văn C",50));
 //    }
 
+    public MotorRepository() {
+        readFile();
+    }
+
     private void readFile() {
         File file = new File(MOTORS_FILE_PATH);
         if (!file.exists()) {
